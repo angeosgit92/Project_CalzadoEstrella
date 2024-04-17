@@ -68,33 +68,59 @@
     <a href="#Niños" class="fas fa-comments"></a>
 </nav>
 
+<h2>¡LAS MARCAS QUE QUIERES, LAS TENEMOS!</h2>
 <!--Banners or sliders-->
-<!--Banners or sliders-->
-<div class="header-3">
-    <div class="container-all">
-        <input type="radio" id="1" name="image-slide"/>
-        <input type="radio" id="2" name="image-slide" hidden/>
-        <input type="radio" id="3" name="image-slide" hidden/>
-        <div class="slide">
-            <div class="item-slide">
-                <img src="Valentines_day.jpg" class="img-normalizada" alt="Valentines Day">
+    <div class="header-3">
+        <div class="container-all">
+            <input type="radio" id="1" name="image-slide"/>
+            <input type="radio" id="2" name="image-slide" hidden/>
+            <input type="radio" id="3" name="image-slide" hidden/>
+
+            <div class="slide">
+                <div class="item-slide">
+                    <img src="Valentines_day.jpg" class="img-normalizada" alt="Valentines Day">
+                </div>
+                <div class="item-slide">
+                    <img src="Halloween.png" class="img-normalizada" alt="Halloween">
+                </div>
+                <div class="item-slide">
+                    <img src="black-friday.jpg" class="img-normalizada" alt="black-friday">
+                </div>
             </div>
-            <div class="item-slide">
-                <img src="Halloween.png" class="img-normalizada" alt="Halloween">
+        
+            <div class="pagination">
+                <label class="pagination-item" for="1"></label>
+                <label class="pagination-item" for="2"></label>
+                <label class="pagination-item" for="3"></label>
             </div>
-            <div class="item-slide">
-                <img src="black-friday.jpg" class="img-normalizada" alt="black-friday">
-            </div>
-        </div>
-    
-        <div class="pagination">
-            <label class="pagination-item" for="1"></label>
-            <label class="pagination-item" for="2"></label>
-            <label class="pagination-item" for="3"></label>
         </div>
     </div>
-</div>
+
+    <!--Section Products-->
+  
+    <!--Section Login-->
+    <div class="login-form-container">
+
+        <div id="close-login-btn" class="fas fa-times"></div>
+    
+        <form action="">
+            <h3>sign in</h3>
+            <span>username</span>
+            <input type="email" name="" class="box" placeholder="enter your email" id="">
+            <span>password</span>
+            <input type="password" name="" class="box" placeholder="enter your password" id="">
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me"> remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <p>forget password ? <a href="#">click here</a></p>
+            <p>don't have an account ? <a href="#">create one</a></p>
+        </form>
+    
+    </div>
+
 		<!-- custom js file link -->
-		<script src="static/js/script.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>
