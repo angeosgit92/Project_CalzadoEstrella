@@ -454,3 +454,39 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     color:var(--black);
     cursor: pointer;
 }
+
+.products {
+    padding: 0 0 50px 0;
+    text-align: center;
+}
+
+.box-container {
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    flex: 1;
+    border: 2px solid #D5C4D7; /* Añadir borde al contenedor */
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 0 10px 20px;
+    text-align: center;
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+}
+
+.box img {
+    height: 200px;
+    width: 80%;
+    object-fit: cover; /* Hacer que la imagen se ajuste dentro del contenedor */
+    border: 4px solid #fff; /* Añadir borde a la imagen */
+}
+
+.product-txt h3 {
+    font-size: 16px;
+    color: #080640;
+    margin-bottom: 10px;
+}
