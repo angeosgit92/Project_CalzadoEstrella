@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Calzado Estrella</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
-    <!-- font awesome cdn link  -->
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <!--font awesome cdn link -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="style.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <!--link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-	<link rel="manifest" href="favicon_io/site.webmanifest">
+	<link rel="manifest" href="favicon_io/site.webmanifest"-->
 </head>
 <body>
 
@@ -28,7 +25,7 @@
     <div class="header-1">
 
         <a href="#" class="logo">
-			<img src="Logo.png" alt="Calzado Estrella">
+			<img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Calzado Estrella">
 		</a>
 
         <form class="search-form">
@@ -78,13 +75,13 @@
 
             <div class="slide">
                 <div class="item-slide">
-                    <img src="Valentines_day.jpg" class="img-normalizada" alt="Valentines Day">
+                    <img src="{{ url_for('static', filename='img/Valentines_day.jpg') }}" class="img-normalizada" alt="Valentines Day">
                 </div>
                 <div class="item-slide">
-                    <img src="Halloween.png" class="img-normalizada" alt="Halloween">
+                    <img src="{{ url_for('static', filename='img/Halloween.png') }}" class="img-normalizada" alt="Halloween">
                 </div>
                 <div class="item-slide">
-                    <img src="black-friday.jpg" class="img-normalizada" alt="black-friday">
+                    <img src="{{ url_for('static', filename='img/Black-friday.jpg') }}" class="img-normalizada" alt="black-friday">
                 </div>
             </div>
         
@@ -100,7 +97,7 @@
     <main class="products container">
         <div class="box-container" id="lista-1">
             <div class="box">
-                <img src="producto1.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/producto1.jpg') }}" alt="">
                 <div class="product-txt">
                     <h3>Sketchers</h3>
                     <p>Tenis Lifestyle Blanco-Marfil-Miel Skechers Uno - Stand On Air</p>
@@ -108,7 +105,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="producto2.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/producto2.jpg') }}" alt="">
                 <div class="product-txt">
                     <h3>Puma</h3>
                     <p>Tenis Lifestyle Blanco-Plateado PUMA Jada Renew Pop-Up</p>
@@ -116,7 +113,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="producto3.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/producto3.jpg') }}" alt="">
                 <div class="product-txt">
                     <h3>Los Gomosos</h3>
                     <p>Tenis Roxder Gris-Ama Para Niño Los Gomosos</p>
@@ -124,7 +121,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="producto4.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/producto4.jpg') }}" alt="">
                 <div class="product-txt">
                     <h3>Sketchers</h3>
                     <p>Tenis Lifestyle Rosa-Terracota-Blanco Skechers Uno 2</p>
@@ -132,7 +129,7 @@
                 </div>
             </div>
             <div class="box">
-                <img src="producto5.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/producto5.jpg') }}" alt="">
                 <div class="product-txt">
                     <h3>Levis</h3>
                     <p>Bota Casual Café-Marrón-Beige Levi's Charles</p>
@@ -148,7 +145,7 @@
         <div id="close-login-btn" class="fas fa-times"></div>    
         <form action="">
             <a href="#" class="logo2">
-                <img class= "logo2" src="Logo.png" alt="Calzado Estrella">
+                <img class= "logo2" src="{{ url_for('static', filename='img/Logo.png') }}" alt="Calzado Estrella">
             </a>
             <input type="email" name="" class="box" placeholder="Correo electrónico" id="">
             <input type="password" name="" class="box" placeholder="Contraseña" id="">
@@ -165,6 +162,6 @@
     </div>
 
 		<!-- custom js file link -->
-		<script src="script.js"></script>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 	</body>
 </html>
