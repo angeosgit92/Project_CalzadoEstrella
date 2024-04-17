@@ -444,40 +444,38 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     cursor: pointer;
 }
 
-.products{
+.products {
     padding: 0 0 50px 0;
     text-align: center;
 }
 
-.box-container{
-    margin: top 55px;
-    display: grid ;
-    grid-template-columns: repeat(auto-fit, minimax(250px, 1fr));
-    gap: 20px;
+.box-container {
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.box{
-    border-top: 2px solid #D5C4D7;
-    padding: 20px;
+.box {
+    flex: 1;
+    border: 2px solid #D5C4D7; /* Añadir borde al contenedor */
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    display: none;
+    margin: 0 10px 20px;
+    text-align: center;
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
 }
 
-.box:nth-child(1),
-.box:nth-child(2),
-.box:nth-child(3),
-.box:nth-child(4),
-.box:nth-child(5){
-    display: inline-block;
-}
-.box img{
+.box img {
     height: 200px;
+    width: 80%;
+    object-fit: cover; /* Hacer que la imagen se ajuste dentro del contenedor */
+    border: 4px solid #fff; /* Añadir borde a la imagen */
 }
 
-.product-txt h3{
-    font-size: 10px;
-    color:#080640;
+.product-txt h3 {
+    font-size: 16px;
+    color: #080640;
     margin-bottom: 10px;
 }
