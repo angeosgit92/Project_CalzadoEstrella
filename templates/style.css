@@ -8,6 +8,9 @@
     --border:.1rem solid rgba(0,0,0,.1);
     --border-hover:.1rem solid var(--black);
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --primary-color: #c7a17a;
+	--background-color: #f9f5f0;
+	--dark-color: #151515;
 }
 
 *{
@@ -101,31 +104,50 @@ section{
     vertical-align: middle; /* Alinear verticalmente con el texto */
     margin-right: 0.5rem; /* Espacio a la derecha del texto */
 }
-
-.header .header-1 .search-form{
-    width:50rem;
-    height:5rem;
-    border:var(--border);
-    overflow: hidden;
-    background:#080640;
-    display:flex;
+.search-form {
+    position: relative;
+    display: flex;
     align-items: center;
-    border-radius: .5rem;
+    border: .5px solid #D5C4D7;
+    border-radius: 2rem;
+    background-color: #D5C4D7; 
+    height: 4.4rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    width: 50rem;
 }
 
-.header .header-1 .search-form input{
-    font-size: 1.6rem;
-    padding:0 1.2rem;
-    height:100%;
-    width:100%;
-    text-transform: none;
-    color:var(--black);
+.search-form input {
+    outline: none;
+    font-family: "Nunito Sans", sans-serif;
+    border: none;
+    width: calc(100% - 4.4rem); /* Ancho del input ajustado para dejar espacio para el icono */
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    color: #080640;
+    cursor: pointer;
+    background-color: transparent; /* Establecer el fondo del input como transparente */
 }
 
-.header .header-1 .search-form label{
-    font-size: 2.5rem;
-    padding-right: 1.5rem;
-    color:var(--white);
+.search-form input::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+.search-form .btn-search {
+    border: none;
+    background-color: #080640;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+    flex: 1;
+    margin-left: -4.4rem; /* Mover el icono de búsqueda hacia la esquina superior derecha */
+}
+
+.btn-search i {
+    font-size: 2rem;
+    color: #fff;
 }
 
 
