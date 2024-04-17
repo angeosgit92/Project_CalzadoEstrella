@@ -98,11 +98,11 @@ section{
 }
 
 .header .header-1 .logo img {
-    width: 15rem; /* Ancho de la imagen */
-    height: auto; /* Altura automática para mantener la proporción */
-    font-weight: bold; /* Peso de la fuente */
-    vertical-align: middle; /* Alinear verticalmente con el texto */
-    margin-right: 0.5rem; /* Espacio a la derecha del texto */
+    width: 15rem; 
+    height: auto;
+    font-weight: bold; 
+    vertical-align: middle; 
+    margin-right: 0.5rem; 
 }
 .search-form {
     position: relative;
@@ -126,7 +126,7 @@ section{
     padding: 0 2rem;
     color: #080640;
     cursor: pointer;
-    background-color: transparent; /* Establecer el fondo del input como transparente */
+    background-color: transparent; 
 }
 
 .search-form input::-webkit-search-cancel-button {
@@ -155,60 +155,65 @@ section{
 .header .header-1 .icons a{
     font-size: 2.5rem;
     margin-left: 1.5rem;
-    color:var(--black);
+    color:#080640;
     cursor: pointer;
 }
 
 .header .header-1 .icons div:hover,
 .header .header-1 .icons a:hover{
-    color:var(--green);
+    color:#0F0C53;
 }
 
 #search-btn{
     display: none;
 }
-
-.header .header-2{
-    background:var(--green);
+.header .header-2 {
+    background: #D5C4D7;
 }
 
-.header .header-2 .navbar{
+.header .header-2 .navbar {
     text-align: center;
 }
 
-.header .header-2 .navbar a{
-    color:#fff;
+.header .header-2 .navbar a,
+.bottom-navbar a {
+    color: #080640;
     display: inline-block;
-    padding:1.2rem;
+    padding: 1.2rem;
     font-size: 1.7rem;
+    text-decoration: none; /* Eliminar cualquier decoración de texto por defecto */
 }
 
-.header .header-2 .navbar a:hover{
-    background:var(--dark-color);
+.header .header-2 .navbar a:hover,
+.bottom-navbar a:hover {
+    text-decoration: underline; /* Subrayar el texto al señalar */
 }
 
-.header .header-2.active{
-    position:fixed;
-    top:0; left:0; right:0;
-    z-index: 1000;
-
-}
-
-.bottom-navbar{
-    text-align: center;
-    background:var(--green);
+.header .header-2.active {
     position: fixed;
-    bottom:0; left:0; right:0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.bottom-navbar {
+    text-align: center;
+    background: #D5C4D7;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     display: none;
 }
 
-.bottom-navbar a{
+.bottom-navbar a {
     font-size: 2.5rem;
-    padding:2rem;
-    color:#fff;
+    padding: 2rem;
+    color: #fff;
 }
 
-.bottom-navbar a:hover{
-    background:var(--dark-color);
+.bottom-navbar a:hover {
+    background: var(--dark-color);
 }
