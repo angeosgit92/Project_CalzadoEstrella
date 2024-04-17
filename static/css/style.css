@@ -407,11 +407,14 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 .login-form-container form .box{
     width: 100%;
     background-color: #D9D9D9;
-    margin:.7rem 0;
+    margin: 15px 0;
     font-size: 1.6rem;
     border:var(--border);
-    border-radius: .5rem;
+    border-radius: .6rem;
+    display: flex;
+    align-items: left;
     padding:1rem 1.2rem;
+    overflow: hidden;
     color:v #080640;
     text-transform: none;
 }
