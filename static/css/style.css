@@ -458,38 +458,48 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     cursor: pointer;
 }
 
-.products {
-    padding: 0 0 50px 0;
-    text-align: center;
+.card {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    height: 95%; 
+    width: 400px;
 }
 
-.box-container {
-    margin-top: 55px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.card-img-top {
+    border-radius: 40px;; 
+    padding: 20px;
+    max-height: 1000px; 
+    object-fit: cover; 
 }
 
-.box {
-    flex: 1;
-    border: 2px solid #D5C4D7; /* Añadir borde al contenedor */
-    border-radius: 15px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    margin: 0 10px 20px;
-    text-align: center;
-    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+.card-body {
+    padding: 25px;
+    margin-top: -15px;
+    height: calc(100% - 200px);
+    overflow: hidden; 
 }
 
-.box img {
-    height: 200px;
-    width: 80%;
-    object-fit: cover; /* Hacer que la imagen se ajuste dentro del contenedor */
-    border: 4px solid #fff; /* Añadir borde a la imagen */
+
+h3, p{
+    font-size: 1.7rem;
 }
 
-.product-txt h3 {
-    font-size: 16px;
-    color: #080640;
-    margin-bottom: 10px;
+h3,h4{
+    color:#080640;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+}
+
+h5{
+    color:#080640;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: normal;
+    text-decoration: line-through;
+    text-decoration-color:#080640 ; 
+    font-size: 1.7rem;
+}
+
+h4,h5{
+    margin-right: 20px; 
+    font-size: 2rem;
 }

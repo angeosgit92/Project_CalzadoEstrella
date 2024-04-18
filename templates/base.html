@@ -95,49 +95,71 @@
 
     <!--Section Products-->
     <main class="products container">
-        <div class="box-container" id="lista-1">
-            <div class="box">
-                <img src="{{ url_for('static', filename='img/producto1.jpg') }}" alt="">
-                <div class="product-txt">
-                    <h3>Sketchers</h3>
-                    <p>Tenis Lifestyle Blanco-Marfil-Miel Skechers Uno - Stand On Air</p>
-                    <p>$329.900   $ 459.900</p>
+        <div class="container py-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
+                <div class="col">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/producto1.jpg') }}"class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h3 class="card-tittle">Sketchers</h3>
+                            <p class="card-text">Tenis Lifestyle Blanco-Marfil-Miel Skechers Uno - Stand On Air</p>
+                            <div class="d-flex justifiy-content-around mb-5">
+                                <h4>$329.900</h4><h5>$459.900</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="box">
-                <img src="{{ url_for('static', filename='img/producto2.jpg') }}" alt="">
-                <div class="product-txt">
-                    <h3>Puma</h3>
-                    <p>Tenis Lifestyle Blanco-Plateado PUMA Jada Renew Pop-Up</p>
-                    <p>$280.000</p>
+                <div class="col">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/producto2.jpg') }}"class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h3 class="card-tittle">Puma</h3>
+                            <p class="card-text">Tenis Lifestyle Blanco-Plateado PUMA Jada Renew Pop-Up</p>
+                            <div class="d-flex justifiy-content-around mb-5">
+                                <h4>$280.000</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="box">
-                <img src="{{ url_for('static', filename='img/producto3.jpg') }}" alt="">
-                <div class="product-txt">
-                    <h3>Los Gomosos</h3>
-                    <p>Tenis Roxder Gris-Ama Para Niño Los Gomosos</p>
-                    <p>$ 150.000</p>
+                <div class="col">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/producto3.jpg') }}"class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h3 class="card-tittle">Los Gomosos</h3>
+                            <p class="card-text">Tenis Roxder Gris-Ama Para Niño Los Gomosos</p>
+                            <div class="d-flex justifiy-content-around mb-5">
+                                <h4>$ 150.000</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="box">
-                <img src="{{ url_for('static', filename='img/producto4.jpg') }}" alt="">
-                <div class="product-txt">
-                    <h3>Sketchers</h3>
-                    <p>Tenis Lifestyle Rosa-Terracota-Blanco Skechers Uno 2</p>
-                    <p>$330.000   $ 400.000</p>
+                <div class="col">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/producto4.jpg') }}"class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h3 class="card-tittle">Sketchers</h3>
+                            <p class="card-text">Tenis Lifestyle Rosa-Terracota-Blanco Skechers Uno 2</p>
+                            <div class="d-flex justifiy-content-around mb-5">
+                                <h4>$330.900</h4><h5>$400.000</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="box">
-                <img src="{{ url_for('static', filename='img/producto5.jpg') }}" alt="">
-                <div class="product-txt">
-                    <h3>Levis</h3>
-                    <p>Bota Casual Café-Marrón-Beige Levi's Charles</p>
-                    <p>$310.000</p>
+                <div class="col">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/producto5.jpg') }}"class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h3 class="card-tittle">Levis</h3>
+                            <p class="card-text">Bota Casual Café-Marrón-Beige Levi's Charles</p>
+                            <div class="d-flex justifiy-content-around mb-5">
+                                <h4>$310.000</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
+       
     </main>
   
     <!--Section Login-->
