@@ -158,3 +158,58 @@ var swiper = new Swiper(".blogs-slider", {
     },
   },
 });
+
+//Sliders - Banners
+document.addEventListener('DOMContentLoaded', function() {
+  const left = document.querySelector('.fa-chevron-left');
+  const right = document.querySelector('.fa-chevron-right');
+  const slider = document.querySelector('.slider');
+  const images = document.querySelectorAll('.img-normalizada');
+
+  let slideNumber = 0;
+  const length = images.length;
+
+  // Crear botones de navegación
+  const bottom = document.querySelector('.bottom');
+  for (let i = 0; i < length; i++) {
+      const div = document.createElement('div');
+      div.className = 'button';
+      bottom.appendChild(div);
+  };
+  const buttons = document.querySelectorAll('.button');
+
+  // Función para restablecer el color de los botones
+  const resetBg = () => {
+      buttons.forEach((button) => {
+          button.style.backgroundColor = 'transparent';
+      });
+  };
+
+  // Función para cambiar el color del botón activo
+  const changeColor = () => {
+      resetBg();
+      buttons[slideNumber].style.backgroundColor = 'white';
+  };
+
+  // Event listeners para los botones
+  buttons.forEach((button, i) => {
+      button.addEventListener('click', () => {
+          slideNumber = i;
+          slider.style.transform = `translateX(-${slideNumber * 400}px)`; // Ajusta según el ancho de las imágenes
+          changeColor();
+      });
+  });
+
+  // Event listeners para los botones de chevron
+  right.addEventListener('click', () => {
+      slideNumber = (slideNumber + 1) % length;
+      slider.style.transform = `translateX(-${slideNumber * 400}px)`; // Ajusta según el ancho de las imágenes
+      changeColor();
+  });
+
+  left.addEventListener('click', () => {
+      slideNumber = (slideNumber - 1 + length) % length;
+      slider.style.transform = `translateX(-${slideNumber * 400}px)`; // Ajusta según el ancho de las imágenes
+      changeColor();
+  });
+});
