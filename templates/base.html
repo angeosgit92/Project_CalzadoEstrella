@@ -155,10 +155,10 @@
   
     <!--Section Login-->
     <div class="login-form-container">
-        <div id="close-login-btn" class="fas fa-times"></div>    
         <form action="">
+            <div id="close-login-btn" class="fas fa-times"></div>
             <a href="#" class="logo2">
-                <img class= "logo2" src="{{ url_for('static', filename='img/Logo.png') }}" alt="Calzado Estrella">
+                <img class="logo2" src="{{ url_for('static', filename='img/Logo.png') }}" alt="Calzado Estrella">
             </a>
             <div>
                 <div class="box">
@@ -169,19 +169,16 @@
                     <i class="fa-solid fa-lock"></i>
                     <input type="password" name="" placeholder="Contraseña" id="">
                 </div>
-            </div>
-                <!--div class="checkbox">
-                    <input type="checkbox" name="" id="remember-me">
-                    <label for="remember-me"> remember me</label>
-                </div-->
-                <p><a href="#">¿Has olvidado tu contraseña?</a></p>
+                <p class="forgot-password"><a href="#">¿Has olvidado tu contraseña?</a></p>
                 <input type="submit" value="Inicio de Sesión" class="btn">
-                <p>¿Aún no tienes cuenta?<a href="#">Registrate</a></p>
-                <p><a href="#">Registrate mayorista</a></p>
-            
+            </div>
+            <div class="links-container">
+                <p>¿Aún no tienes cuenta? <a href="#">Regístrate</a></p>
+                <p><a href="#">Regístrate mayorista</a></p>
+            </div>
         </form>
-    
     </div>
+    
 
 		<!-- custom js file link -->
 		<script src="{{ url_for('static', filename='js/script.js') }}"></script>

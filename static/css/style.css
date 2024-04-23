@@ -287,106 +287,143 @@ h2 {
     
 }
 
-.login-form-container .logo2 img {
-    width: 18em; 
-    height: 12,5em;
-    font-weight: bold; 
-    vertical-align: middle; 
-    margin-right: 0.5rem; 
+.login-form-container .logo2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem; /* Espacio entre el logo y los campos de entrada */
 }
 
-.login-form-container{
+.login-form-container .logo2 img {
+    width: 18rem;
+    height: 12.5em;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.login-form-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:rgba(255,255,255,.9);
-    position:fixed;
-    top:0; right:-105%;
+    background: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(2.5px);
+    position: fixed;
+    top: 0;
+    right: -105%;
     z-index: 10000;
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
 }
 
-.login-form-container.active{
-    right:0;
+.login-form-container.active {
+    right: 0;
 }
 
-.login-form-container form{
-    background:#fff;
-    border:var(--border);
-    width:65rem;
+.login-form-container form {
+    position: relative; /* Agrega posición relativa para posicionar el botón de cierre */
+    background: #fff;
+    border: var(--border);
+    width: 65rem;
     padding: 30px 120px 30px;
     box-shadow: var(--box-shadow);
-    border-radius: .6rem;
-    margin:3rem;
+    border-radius: 0.6rem;
+    margin: 3rem;
 }
-
-.login-form-container form h3{
+.login-form-container form h3 {
     font-size: 2.5rem;
     text-transform: uppercase;
-    color:var(--black);
+    color: var(--black);
     text-align: center;
 }
 
-.login-form-container form span{
+.login-form-container form span {
     display: block;
     font-size: 1.5rem;
     padding-top: 1rem;
 }
 
-.login-form-container form .box{
+.login-form-container form .box {
     width: 100%;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     margin: 15px 0;
     font-size: 1.6rem;
-    border:var(--border);
-    border-radius: .6rem;
+    border: var(--border);
+    border-radius: 0.6rem;
     display: flex;
-    align-items: left;
-    padding:1rem 1.2rem;
-    overflow: hidden;
-    color:v #080640;
-    text-transform: none;
-}
-
-.login-form-container form .checkbox{
-    display:flex;
     align-items: center;
-    gap:.5rem;
-    padding:1rem 0;
+    padding: 1rem 1.2rem;
+    overflow: hidden;
+    color: #080640;
+    text-transform: none;
+    gap: 10px;
 }
 
-.login-form-container form .checkbox label{
+.login-form-container .box i.fa-solid.fa-envelope, i.fa-solid.fa-lock {
+    margin-left: 20px; /* Ajusta el margen derecho según sea necesario */
+}
+
+.login-form-container form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.login-form-container form .checkbox label {
     font-size: 1.5rem;
-    color:var(--light-color);
+    color: var(--light-color);
     cursor: pointer;
 }
 
-.login-form-container form .btn{
+.login-form-container form .btn {
     background-color: #080640;
     text-align: center;
-    width:100%;
-    margin:1.5rem 0;
+    width: 100%;
+    margin: 1.5rem 0;
+    text-transform: capitalize;
 }
 
-.login-form-container form p{
-    padding-top: .8rem;
-    color:var(--light-color);
+.login-form-container form p {
+    padding-top: 0.8rem;
+    color: var(--light-color);
     font-size: 1.5rem;
 }
 
-.login-form-container form p a{
-    color:#080640;
+.login-form-container form p a {
+    color: #080640;
     text-decoration: underline;
 }
 
-.login-form-container #close-login-btn{
+.login-form-container #close-login-btn {
     position: absolute;
-    top:1.5rem; right:2.5rem;
-    font-size: 5rem;
-    color:var(--black);
-    cursor: pointer;
+    top: 1.5rem;
+    right: 1.5rem; /* Ajusta la posición del botón */
+    font-size: 2rem; /* Ajusta el tamaño del icono según sea necesario */
+    color: var(--black);
+    cursor: pointer;
 }
+.forgot-password {
+    text-align: right;;
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+.links-container {
+    text-align: center;
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+
+.links-container p {
+    margin-bottom: 5px; /* Ajusta el margen inferior entre los enlaces */
+}
+
+.login-form-container input[type="submit"] {
+    display: block;
+    margin: 10px auto; /* Centra el botón horizontalmente */
+}
+
+.login-form-container form .box input[type="email"], input[type="password"] {
+    background-color: transparent; /* Establece el fondo del input como transparente */
+}
+
 
 .card {
     border-radius: 20px;
