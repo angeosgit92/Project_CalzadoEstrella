@@ -153,16 +153,14 @@ section{
 }
 
 
-.header .header-1 .icons div,
-.header .header-1 .icons a{
+.header .header-1 .icons div{
     font-size: 2.5rem;
     margin-left: 5rem;
     color:#080640;
     cursor: pointer;
 }
 
-.header .header-1 .icons div:hover,
-.header .header-1 .icons a:hover{
+.header .header-1 .icons div:hover{
     color:#0F0C53;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agregar sombra */
 
@@ -426,7 +424,8 @@ h2 {
 
 
 .card {
-    border-radius: 20px;
+    height: 90%; 
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     width: 100%; /* Ajustar el ancho al 100% */
     max-width: 400px; /* Establecer un ancho máximo */
@@ -436,16 +435,17 @@ h2 {
 }
 
 .card-img-top {
-    border-radius: 40px;; 
-    padding: 20px;
+    border-radius: 18px;; 
+    padding: 10px;
     max-height: 1000px; 
     object-fit: cover; 
+    width: 100%;
 }
 
 .card-body {
-    padding: 25px;
+    padding: 20px;
     margin-top: -15px;
-    height: calc(100% - 200px);
+    height: calc(100% - 400px);
     overflow: hidden; 
 }
 
