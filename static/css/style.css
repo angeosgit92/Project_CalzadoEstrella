@@ -79,14 +79,10 @@ section{
     padding:.9rem 3rem;
     border-radius: .5rem;
     color:#fff;
-    background:var(--green);
-    font-size: 1.7rem;
+    background:#080640;
+    font-size: 1.5rem;
     cursor: pointer;
     font-weight: 500;
-}
-
-.btn:hover{
-    background:var(--dark-color);
 }
 
 .header .header-1{
@@ -103,6 +99,26 @@ section{
     font-weight: bold; 
     vertical-align: middle; 
     margin-right: 0.5rem; 
+}
+.header .header-1 .user {
+    position: absolute;
+    top: 25%; /* Ajusta este valor según sea necesario para posicionar el cuadro del usuario */
+    right: -110%; /* Lo inicializamos fuera de la pantalla */
+    width: 30rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: .5rem;
+    background: rgba(255, 255, 255, 0.9); 
+    text-align: center;
+    transition: right 0.4s ease; /* Agregamos una transición suave para suavizar la animación */
+}
+.header .header-1 .user .btn {
+    width: 150px; /* Establece el ancho deseado para los botones */
+    margin: 0.5rem; /* Ajusta el margen según sea necesario */
+}
+
+.header .header-1 .user.active {
+    right: 2rem; /* Movemos el cuadro de usuario a la posición deseada */
 }
 
 .search-form {
@@ -185,8 +201,7 @@ section{
 
 }
 
-.header .header-2 .navbar a,
-.bottom-navbar a {
+.header .header-2 .navbar a{
     color: #080640;
     display: inline-block;
     padding: 1.2rem;
@@ -194,39 +209,18 @@ section{
     text-decoration: none;
 }
 
-.header .header-2 .navbar a:hover,
-.bottom-navbar a:hover {
+.header .header-2 .navbar a:hover{
     text-decoration: underline; 
 }
 
 .header .header-2.active {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
 }
 
-.bottom-navbar {
-    text-align: center;
-    background: #D5C4D7;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    display: none;
-}
-
-.bottom-navbar a {
-    font-size: 2.5rem;
-    padding: 2rem;
-    color: #fff;
-}
-
-.bottom-navbar a:hover {
-    background: var(--dark-color);
-}
 h2 {
     text-align: center;
     font-size: 2rem;
@@ -286,7 +280,7 @@ h2 {
     cursor: pointer;
     
 }
-/* Estilos para log in */
+/* Estilos para login */
 .login-form-container .logo2 {
     display: flex;
     justify-content: center;
@@ -473,7 +467,7 @@ h5{
 
 h4,h5{
     margin-right: 20px; 
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .card h3 {
@@ -485,38 +479,155 @@ h4,h5{
     margin-top: 0; /* Eliminar el margen superior predeterminado */
 }
 
-/* Estilos para el modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.4);
-  }
   
-  .modal-content {
-    background-color: #fefefe;
-    margin: 20% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 60%;
-    text-align: center;
-  }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+/* Estilos para registro */
+.register-form-container .logo2, .register-mayorista-form-container .logo2, .recuperar-contraseña-form-container .logo2{
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente el logo */
+    margin-bottom: 2rem; /* Espacio entre el logo y los campos de entrada */
+}
+
+.register-form-container .logo2 img, .register-mayorista-form-container .logo2 img, .recuperar-contraseña-form-container .logo2 img{
+    width: 18rem;
+    height: 12.5em;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.register-form-container, .register-mayorista-form-container, .recuperar-contraseña-form-container  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9); 
+    backdrop-filter: blur(2.5px);
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+
+.register-form-container.active, .register-mayorista-form-container.active, .recuperar-contraseña-form-container.active{
+    right: 0;
+}
+
+.register-form-container form, .register-mayorista-form-container form, .recuperar-contraseña-form-container{
+    position: relative; /* Agrega posición relativa para posicionar el botón de cierre */
+    background: #fff;
+    border: var(--border);
+    width: 65rem;
+    padding: 30px 120px 30px;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.6rem;
+    margin: 3rem;
+}
+
+.register-form-container form h3, .register-mayorista-form-container form h3, .recuperar-contraseña-form-container h3{
+    font-size: 2.5rem;
+    text-transform: none; /* Quita la transformación a mayúsculas */
+    color: var(--black);
+    text-align: center;
+}
+
+.register-form-container form span, .register-mayorista-form-container form span, .recuperar-contraseña-form-container form span {
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.register-form-container form .box, .register-mayorista-form-container form .box, .recuperar-contraseña-form-container form .box{
+    width: 100%;
+    background-color: #d9d9d9;
+    margin: 15px 0;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    overflow: hidden;
+    color: #080640;
+    text-transform: none;
+    gap: 10px;
+}
+
+.register-form-container .box i.fa-solid.fa-envelope, .register-mayorista-form-container .box i.fa-solid.fa-envelope,
+.register-form-container .box i.fa-solid.fa-lock, .register-mayorista-form-container .box i.fa-solid.fa-lock,
+.register-form-container .box i.fa-solid.fa-user, .register-mayorista-form-container .box i.fa-solid.fa-user, 
+.register-mayorista-form-container .box i.fa-solid.fa-building-memo, .recuperar-contraseña-form-container .box i.fa-solid.fa-envelope {
+    margin-left: 20px; /* Ajusta el margen derecho según sea necesario */
+}
+
+.register-form-container form .checkbox, .register-mayorista-form-container form .checkbox, .recuperar-contraseña-form-container .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.register-form-container form .checkbox label, .register-mayorista-form-container form .checkbox label, .recuperar-contraseña-form-container form .checkbox label {
+    font-size: 1.5rem;
+    color: var(--light-color);
     cursor: pointer;
-  }
-  
+}
+
+.register-form-container form .btn, .register-mayorista-form-container form .btn, .recuperar-contraseña-form-container form .btn {
+    background-color: #080640;
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+    text-transform: capitalize;
+}
+
+.register-form-container form p, .register-mayorista-form-container form p, .recuperar-contraseña-form-container form p{
+    padding-top: 0.8rem;
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+
+.register-form-container form p a, .register-mayorista-form-container form p a, .recuperar-contraseña-form-container form p a  {
+    color: #080640;
+    text-decoration: underline;
+}
+
+.register-form-container #close-register-btn, .register-mayorista-form-container #close-register-btn .recuperar-contraseña-form-container #close-recuperar-contraseña-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem; /* Ajusta la posición del botón */
+    font-size: 2rem; /* Ajusta el tamaño del icono según sea necesario */
+    color: var(--black);
+    cursor: pointer;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+
+.links-container {
+    text-align: center;
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+
+.links-container p {
+    margin-bottom: 5px; /* Ajusta el margen inferior entre los enlaces */
+}
+
+.register-form-container input[type="submit"], .register-mayorista-form-container input[type="submit"], .recuperar-contraseña-form-container input[type="submit"]{
+    display: block;
+    margin: 10px auto; /* Centra el botón horizontalmente */
+}
+
+.register-form-container form .box input[type="email"],
+.register-form-container form .box input[type="password"],
+.register-form-container form .box input[type="text"],
+.register-mayorista-form-container form .box input[type="email"],
+.register-mayorista-form-container .box input[type="password"],
+.register-mayorista-form-container .box input[type="text"],
+.recuperar-contraseña-form-container .box input[type="email"] {
+    background-color: transparent; /* Establece el fondo del input como transparente */
+}
+

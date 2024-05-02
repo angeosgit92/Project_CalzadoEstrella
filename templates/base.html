@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!--meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Calzado Estrella</title>
     <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <!--font awesome cdn link -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- custom css file link  -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
     <!--link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -19,12 +19,9 @@
 <body>
 
 <!-- header section starts  -->
-
 <header class="header">
-
     <div class="header-1">
-
-        <a href="#" class="logo">
+        <a href="./base.html" class="logo">
 			<img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Calzado Estrella">
 		</a>
 
@@ -37,8 +34,16 @@
 
         <div class="icons">
             <div id="search-btn" class="fa-solid fa-magnifying-glass"></div>
-            <button id="login-btn" class="fa-solid fa-user"></button>
+            <button id="user-btn" class="fa-solid fa-user"></button>
             <div id="cart-btn" class="fa-sharp fa-solid fa-cart-shopping"></div>
+        </div>
+
+        <div class="user">
+            <form action="">
+                <button type="button" class="btn" id="login-btn">Iniciar sesión</button>
+                <button type="button" class="btn" id="register-btn">Registrarse</button>
+
+            </form>
         </div>
 
     </div>
@@ -52,19 +57,9 @@
         </nav>
     </div>
 
+
 </header>
-
 <!-- header section ends -->
-
-<!-- bottom navbar  -->
-
-<nav class="bottom-navbar">
-    <a href="#Temporada" class="fas fa-home"></a>
-    <a href="#Mujer" class="fas fa-list"></a>
-    <a href="#Hombre" class="fas fa-tags"></a>
-    <a href="#Niños" class="fas fa-comments"></a>
-</nav>
-
 <h2>¡LAS MARCAS QUE QUIERES, LAS TENEMOS!</h2>
 <!--Banners or sliders-->
     <div class="header-3">
@@ -83,6 +78,7 @@
             <div class="bottom"></div>
         </div><!--End container-->
     </div><!--End header3--->
+
 
     <!--Section Products-->
     <main class="products container">
@@ -152,15 +148,7 @@
         </div>
        
     </main>
-    
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-        <span id="close-modal-btn" class="close">&times;</span>
-        <button id="inicio-sesion-btn">Inicio de Sesión</button>
-        <button id="registro-btn">Registro</button>
-        </div>
-    </div>
+
   
     <!--Section Login-->
     <div class="login-form-container">
@@ -178,12 +166,106 @@
                     <i class="fa-solid fa-lock"></i>
                     <input type="password" name="" placeholder="Contraseña" id="">
                 </div>
-                <p class="forgot-password"><a href="#">¿Has olvidado tu contraseña?</a></p>
+                <p class="forgot-password"><a href="#" id="forgot-password-link">¿Has olvidado tu contraseña?</a></p>
                 <input type="submit" value="Inicio de Sesión" class="btn">
             </div>
             <div class="links-container">
-                <p>¿Aún no tienes cuenta? <a href="#">Regístrate</a></p>
-                <p><a href="#">Regístrate mayorista</a></p>
+                <p>¿Aún no tienes cuenta? <a href="#" id="register-link">Regístrate</a></p>
+                <p><a href="#" id="register-mayorista">Regístrate mayorista</a></p>
+            </div>
+        </form>
+    </div>
+
+
+     <!--Section Register Natural-->
+     <div class="register-form-container">
+        <form action="">
+            <div id="close-register-btn" class="fas fa-times"></div>
+            <a href="#" class="logo2">
+                <img class="logo2" src="{{ url_for('static', filename='img/Logo.png') }}" alt="Calzado Estrella">
+            </a>
+            <div>
+                <h3>Regístrate</h3>
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="" placeholder="Nombres" id="">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="" placeholder="Apellidos" id="">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="" placeholder="Correo electrónico" id="">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="" placeholder="Contraseña" id="">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="" placeholder="Confirmar contraseña" id="">
+                </div>
+                <input type="submit" value="Crear cuenta" class="btn">
+                <div class="links-container">
+                    <p>¿Ya tienes cuenta? <a href="#" id="inico-sesion">Inicia sesión</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--Section Register Mayorista-->
+    <div class="register-mayorista-form-container">
+        <form action="">
+            <div id="close-register-mayorista-btn" class="fas fa-times"></div>
+            <a href="#" class="logo2">
+                <img class="logo2" src="{{ url_for('static', filename='img/Logo.png') }}" alt="Calzado Estrella">
+            </a>
+            <div>
+                <h3>Regístrate</h3>
+                <div class="box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="" placeholder="Nombres" id="">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-building-memo"></i>
+                    <input type="text" name="" placeholder="Empresa u Organización" id="">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="" placeholder="Correo electrónico" id="">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="" placeholder="Contraseña" id="">
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="" placeholder="Confirmar contraseña" id="">
+                </div>
+                <input type="submit" value="Crear cuenta" class="btn">
+                <div class="links-container">
+                    <p>¿Ya tienes cuenta? <a href="#" id="inico-sesion">Inicia sesión</a></p>
+                </div>
+            </div>
+        </form>
+    </div> 
+
+    <!--Section Recuperar Contraseña-->
+    <div class="recuperar-contraseña-form-container">
+        <form action="">
+            <div id="close-recuperar-contraseña-btn" class="fas fa-times"></div>
+            <a href="#" class="logo2">
+                <img class="logo2" src="{{ url_for('static', filename='img/Logo.png') }}" alt="Calzado Estrella">
+            </a>
+            <div>
+                <h3>Recuperar contraseña</h3>
+                <p>Ingrese la dirección de correo electrónico asociado a su cuenta Calzado Estrella</p>
+                <div class="box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="" placeholder="Correo electrónico" id="">
+                </div>
+                <input type="submit" value="Enviar" class="btn">
             </div>
         </form>
     </div>
