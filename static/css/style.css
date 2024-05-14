@@ -593,7 +593,7 @@ h4,h5{
     text-decoration: underline;
 }
 
-.register-form-container #close-register-btn, .register-mayorista-form-container #close-register-btn .recuperar-contraseña-form-container #close-recuperar-contraseña-btn {
+.register-form-container #close-register-btn, .register-mayorista-form-container #close-register-mayorista-btn .recuperar-contraseña-form-container #close-recuperar-contraseña-btn {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem; /* Ajusta la posición del botón */
